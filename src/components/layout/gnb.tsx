@@ -18,12 +18,14 @@ const menuItems = [
   { name: 'Main', href: '/' },
   { name: 'AX Agency', href: '/ax' },
   { name: 'AEO', href: '/aeo' },
+  { name: 'Marketing', href: '/marketing' },
   { name: 'Library', href: '/board' },
 ];
 
 const getLogoSrc = (pathname: string) => {
   if (pathname.startsWith('/aeo')) return '/logos/logo-aeo.svg';
   if (pathname.startsWith('/ax')) return '/logos/logo-ax.svg';
+  if (pathname.startsWith('/marketing')) return '/logos/logo-marketing.svg';
   return '/XNEX.svg';
 };
 
