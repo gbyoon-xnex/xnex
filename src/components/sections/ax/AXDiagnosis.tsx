@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const AXDiagnosis = () => {
   const [checkedItems, setCheckedItems] = useState<boolean[]>(new Array(6).fill(false));
   const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -14,19 +15,15 @@ const AXDiagnosis = () => {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in');
+            setIsVisible(true);
           }
         });
       },
       { threshold: 0.07 }
     );
 
-    const rvElements = section.querySelectorAll('.rv');
-    rvElements.forEach(el => revealObserver.observe(el));
-
-    return () => {
-      revealObserver.disconnect();
-    };
+    revealObserver.observe(section);
+    return () => revealObserver.disconnect();
   }, []);
 
   const checklistData = [
@@ -78,7 +75,7 @@ const AXDiagnosis = () => {
   return (
     <section id="s7" ref={sectionRef}>
       <div className="check-layout">
-        <div className="check-left rv">
+        <div className={`check-left rv ${isVisible ? 'in' : ''}`}>
           <h2>지금 귀사에<br /><em>해당됩니까?</em></h2>
           <p style={{ fontSize: '13px', color: 'var(--t2)', lineHeight: '1.8', marginTop: '16px' }}>
             체크할수록 오른쪽에서 진단 결과를 확인하세요.
@@ -96,7 +93,7 @@ const AXDiagnosis = () => {
             ))}
           </div>
         </div>
-        <div className="diag-result rv" id="diagResult">
+        <div className={`diag-result rv ${isVisible ? 'in' : ''}`} id="diagResult">
           <div className="diag-score">{count}</div>
           <div className="diag-bar-wrap">
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>

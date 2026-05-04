@@ -39,11 +39,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#000] border-t border-[rgba(255,255,255,0.06)] py-10 px-10">
+    <footer className="w-full bg-[#000] border-t border-[rgba(255,255,255,0.06)] py-10 px-6 md:px-10">
       <div className="max-w-[1600px] mx-auto">
         {/* Upper Row: Logo+Slogan / Links */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-16">
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-16">
+          <div className="flex flex-col gap-3 w-full text-center md:text-left items-center md:items-start">
             <Link href="/" className="inline-block">
               <Image 
                 src={getLogo()} 
@@ -59,7 +59,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <nav className="flex flex-wrap gap-x-8 gap-y-3">
+          <nav className="flex flex-wrap gap-x-8 gap-y-4 justify-center md:justify-end w-full md:w-auto">
             {links.filter(l => !l.hidden).map((link) => (
               <Link 
                 key={link.name} 

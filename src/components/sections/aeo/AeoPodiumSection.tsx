@@ -30,7 +30,7 @@ export default function AeoPodiumSection() {
           {[1, 2, 3].map((rank, i) => (
             <div
               key={rank}
-              className={`podium-slot ${!visible ? 'invisible' : ''}`}
+              className="podium-slot"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? 'translateY(0)' : 'translateY(40px)',
@@ -43,9 +43,16 @@ export default function AeoPodiumSection() {
               <div className="podium-label">{rank}순위 노출</div>
             </div>
           ))}
-          <div className="podium-slot invisible" style={{ marginLeft: '24px' }}>
-            <div className="podium-block" style={{ flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontSize: '18px' }}>👻</div>
+          <div 
+            className="podium-slot is-ghost"
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'translateY(0)' : 'translateY(40px)',
+              transition: `transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s, opacity 0.4s 0.45s`
+            }}
+          >
+            <div className="podium-block">
+              <div style={{ fontSize: '24px' }}>👻</div>
             </div>
             <div className="podium-label">4위↓ invisible</div>
           </div>

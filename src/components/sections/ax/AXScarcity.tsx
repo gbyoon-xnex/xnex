@@ -82,7 +82,7 @@ const AXScarcity = () => {
 
     const trTimer = setTimeout(() => {
       if (scTrRef.current) {
-        scTrRef.current.style.transform = 'translateY(-56px)';
+        scTrRef.current.classList.add('shifted');
       }
     }, 1000);
 
@@ -101,7 +101,7 @@ const AXScarcity = () => {
     <section id="s9" ref={sectionRef}>
       <div className="sc-inner rv">
         <div className="sc-tag">월 최대 2개 기업</div>
-        <h2 className="sc-h">'할 수 있는' 기업만<br />함께합니다.</h2>
+        <h2 className="sc-h">{"'"}할 수 있는{"'"} 기업만<br />함께합니다.</h2>
         <p className="sc-sub">에프터&비포가 크게 차이날 수 있는 브랜드&컴퍼니하고만 일을 합니다.<br /><strong>이번 달 잔여 1자리.</strong></p>
         
         <div className="sc-slot-wrap">

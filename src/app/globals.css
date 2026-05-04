@@ -164,9 +164,9 @@
   /* GNB Styles from React Component */
   .gnb-container {
     z-index: 200;
-    padding: 10px 16px 0;
+    padding: 10px 10px 0;
     position: sticky;
-    top: 20px; /* Adjusted for static html */
+    top: 10px;
     width: 100%;
   }
   @media (min-width: 768px) {
@@ -201,10 +201,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    gap: 8px;
+    gap: 4px;
     white-space: nowrap;
   }
-  @media (min-width: 720px) {
+  @media (min-width: 860px) {
     .gnb-nav-links { display: flex; }
   }
   .gnb-nav-item {
@@ -214,11 +214,17 @@
     color: rgba(255,255,255,0.6);
     cursor: pointer;
     border-radius: 20px;
-    padding: 6px 18px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 13px;
     font-weight: 700;
     transition: all .2s;
     text-decoration: none;
+  }
+  @media (min-width: 1024px) {
+    .gnb-nav-item {
+      padding: 6px 18px;
+      font-size: 14px;
+    }
   }
   .gnb-nav-item:hover {
     color: #fff;

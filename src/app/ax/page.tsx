@@ -18,7 +18,6 @@ export default function AxPage() {
   const curRef = useRef<HTMLDivElement>(null);
   const curRRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [showFcta, setShowFcta] = useState(false);
 
   useEffect(() => {
@@ -52,7 +51,6 @@ export default function AxPage() {
 
     const handleScroll = () => {
       const s = window.scrollY;
-      setIsScrolled(s > 60);
       setShowFcta(s > 400);
     };
 

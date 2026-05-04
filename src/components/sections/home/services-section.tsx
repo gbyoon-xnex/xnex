@@ -38,16 +38,16 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative w-full min-h-screen flex flex-col justify-center bg-white dark:bg-black" style={{ fontFamily: 'var(--font-sora)' }}>
-      <div className="max-w-[1600px] mx-auto w-full flex flex-col h-screen pt-28 pb-16">
-        <div className="mb-5">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-3 text-gray-900 dark:text-white leading-tight">
+    <section id="services" className="relative w-full min-h-screen flex flex-col justify-center bg-white dark:bg-black px-6 overflow-x-hidden" style={{ fontFamily: 'var(--font-sora)' }}>
+      <div className="max-w-[1600px] mx-auto w-full flex flex-col min-h-screen md:min-h-[auto] md:h-auto lg:h-screen pt-20 md:pt-32 pb-16 px-6 md:px-0">
+        <div className="mb-8 md:mb-12 text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 text-gray-900 dark:text-white leading-tight tracking-tight">
             왜 XNEX 이어야만 하는가?
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-dashed border-white/40 overflow-hidden relative flex-1">
-          {services.map((s, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-dashed border-white/40 overflow-hidden relative flex-shrink-0 lg:flex-1">
+          {services.map((s) => (
             <div
               key={s.title}
               className="group relative p-7 transition-all duration-300 border-r border-b border-dashed border-white/40 bg-white dark:bg-black flex flex-col justify-between"
@@ -56,33 +56,33 @@ export default function ServicesSection() {
               <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2" style={{ borderColor: 'var(--primary)' }} />
               <span className="absolute -bottom-px -left-px block size-4 border-b-2 border-l-2" style={{ borderColor: 'var(--primary)' }} />
               <span className="absolute -bottom-px -right-px block size-4 border-b-2 border-r-2" style={{ borderColor: 'var(--primary)' }} />
-              <div className="flex flex-col space-y-5">
+              <div className="flex flex-col space-y-4 md:space-y-6 break-words">
                 <div className="flex gap-2">
                   {s.icons ? (
                     s.icons.map((icon, idx) => (
-                      <div key={idx} className="w-14 h-14 rounded-xl flex items-center justify-center bg-black/5 dark:bg-white/10">
+                      <div key={idx} className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center bg-black/5 dark:bg-white/10">
                         {icon}
                       </div>
                     ))
                   ) : (
-                    <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-black/5 dark:bg-white/10">
+                    <div className="w-10 h-10 md:w-14 md:h-14 rounded-lg md:rounded-xl flex items-center justify-center bg-black/5 dark:bg-white/10">
                       {s.icon}
                     </div>
                   )}
                 </div>
-                <div className="space-y-3">
-                  <h3 className="font-black text-gray-900 dark:text-gray-100 tracking-tight text-4xl">
+                <div className="space-y-2 md:space-y-4">
+                  <h3 className="font-black text-gray-900 dark:text-gray-100 tracking-tight text-xl sm:text-2xl lg:text-4xl">
                     {s.title}
-                    <span className="ml-2 text-base text-gray-500 dark:text-gray-400 font-normal">
+                    <span className="block lg:inline lg:ml-2 text-[10px] sm:text-xs lg:text-base text-gray-500 dark:text-gray-400 font-normal">
                       {s.subTitle}
                     </span>
                   </h3>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-snug">
+                  <p className="text-base lg:text-lg text-gray-600 dark:text-gray-300 leading-snug">
                     {s.desc}
                   </p>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 text-base text-gray-500 dark:text-gray-400 mt-2">
+              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-base text-gray-500 dark:text-gray-400 mt-6 sm:mt-2">
                 {s.tags.map((tag) => (
                   <span key={tag} className="px-2 py-1 rounded-md bg-black/5 dark:bg-white/10">
                     {tag}

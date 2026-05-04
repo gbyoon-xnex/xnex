@@ -88,8 +88,8 @@ const AXForm = () => {
 
   return (
     <section id="s10" ref={sectionRef}>
-      <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 40px' }}>
-        <h2 className="rv" style={{ fontFamily: 'var(--fd)', fontSize: 'clamp(36px,4.5vw,56px)', lineHeight: '.95', letterSpacing: '-.01em', marginBottom: '32px', textAlign: 'center' }}>
+      <div className="form-inner-wrap">
+        <h2 className="rv form-title">
           무료 AX 진단,<br /><em style={{ fontStyle: 'normal', color: 'var(--org)' }}>지금 신청하세요.</em>
         </h2>
         <div className="form-card rv">
@@ -176,24 +176,24 @@ const AXForm = () => {
         </div>
       </div>
 
-      <div style={{ maxWidth: '900px', margin: '40px auto 0', padding: '0 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '2px', border: '1px solid var(--line)', borderRadius: '8px', overflow: 'hidden' }}>
-          <div className="ps rv" style={{ background: 'var(--bg2)', padding: '24px 22px', borderRight: '1px solid var(--line)', flexDirection: 'column', alignItems: 'flex-start', gap: '10px' }}>
-            <div className="ps-step" style={{ fontSize: '36px' }}>01</div>
+      <div className="form-steps-wrap">
+        <div className="ax-form-steps">
+          <div className="ps rv ps-1">
+            <div className="ps-step">01</div>
             <div>
               <div className="ps-h">유선 상담 (무료)</div>
               <div className="ps-d">담당 PM이 현황을 파악하고 방향성을 논의합니다.</div>
             </div>
           </div>
-          <div className="ps rv" style={{ background: 'var(--bg2)', padding: '24px 22px', borderRight: '1px solid var(--line)', flexDirection: 'column', alignItems: 'flex-start', gap: '10px' }}>
-            <div className="ps-step" style={{ fontSize: '36px' }}>02</div>
+          <div className="ps rv ps-2">
+            <div className="ps-step">02</div>
             <div>
               <div className="ps-h">대면 미팅 & 무료 진단</div>
               <div className="ps-d">4개 영역 정밀 진단. 데이터·현업·역량·인프라.</div>
             </div>
           </div>
-          <div className="ps rv" style={{ background: 'var(--bg2)', padding: '24px 22px', flexDirection: 'column', alignItems: 'flex-start', gap: '10px' }}>
-            <div className="ps-step" style={{ fontSize: '36px' }}>03</div>
+          <div className="ps rv ps-3">
+            <div className="ps-step">03</div>
             <div>
               <div className="ps-h">맞춤 솔루션 제안</div>
               <div className="ps-d">ROI 기반 최적 솔루션을 설계합니다.</div>

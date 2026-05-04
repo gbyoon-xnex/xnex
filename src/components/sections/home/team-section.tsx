@@ -50,9 +50,9 @@ const members = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="relative max-w-[1600px] mx-auto my-32 w-full" style={{ fontFamily: 'var(--font-sora)' }}>
-      <div className="mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+    <section id="team" className="relative max-w-[1600px] mx-auto py-16 md:py-24 w-full px-6 md:px-12 lg:px-20" style={{ fontFamily: 'var(--font-sora)' }}>
+      <div className="mb-12 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
           왜 엑스넥스가 잘할 수밖에 없는가.
         </h2>
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
@@ -60,7 +60,7 @@ export default function TeamSection() {
         </p>
       </div>
 
-      <div className="relative border border-dashed border-white/40 bg-black overflow-hidden grid grid-cols-1 md:grid-cols-3 gap-0">
+      <div className="relative border border-dashed border-white/40 bg-black overflow-hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
         <span className="absolute -left-px -top-px block size-4 border-l-2 border-t-2 z-20" style={{ borderColor: 'var(--primary)' }} />
         <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2 z-20" style={{ borderColor: 'var(--primary)' }} />
         <span className="absolute -bottom-px -left-px block size-4 border-b-2 border-l-2 z-20" style={{ borderColor: 'var(--primary)' }} />
@@ -69,11 +69,11 @@ export default function TeamSection() {
         {members.map((m) => (
           <div
             key={m.name}
-            className="p-8 border-b md:border-r border-dashed border-white/20 hover:bg-white/[0.03] transition-colors group"
+            className="p-6 md:p-8 border-b border-r border-dashed border-white/20 hover:bg-white/[0.03] transition-colors group sm:odd:border-r lg:odd:border-r lg:even:border-r-0 lg:[&:nth-child(3n)]:border-r-0"
           >
             <div className="flex items-center gap-4 mb-5">
               <div
-                className={`flex-shrink-0 w-16 h-16 rounded-xl flex items-center justify-center text-2xl font-black text-white bg-gradient-to-br ${m.color}`}
+                className={`flex-shrink-0 w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-xl md:text-2xl font-black text-white bg-gradient-to-br ${m.color}`}
               >
                 {m.name[0]}
               </div>

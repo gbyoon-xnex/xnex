@@ -34,7 +34,7 @@ export default function AeoPricingSection() {
           <div className="s8-reason">
             <div className="s8-reason-t">왜 700만원짜리 작업을 5월에만 300만원에?</div>
             <div className="s8-reason-body">
-              <strong style={{ color: 'var(--yel)' }}>1.</strong> AI가 아직 '업종별 답'을 굳히지 않은 지금이 골든타임. 학습이 누적되면 후발주자는 5배의 콘텐츠 필요.<br />
+              <strong style={{ color: 'var(--yel)' }}>1.</strong> AI가 아직 {"'"}업종별 답{"'"}을 굳히지 않은 지금이 골든타임. 학습이 누적되면 후발주자는 5배의 콘텐츠 필요.<br />
               <strong style={{ color: 'var(--yel)' }}>2.</strong> 7번째 업종 레퍼런스 확보 단계. 레퍼런스 누적 → 단가 인상. <strong>6월부터 매월 +50만원.</strong>
             </div>
             <div style={{ marginTop: '14px', paddingTop: '12px', borderTop: '1px solid rgba(255,184,0,0.2)', fontFamily: 'Share Tech Mono, monospace', fontSize: '11px', color: 'var(--yel)', letterSpacing: '0.05em', lineHeight: 1.9 }}>

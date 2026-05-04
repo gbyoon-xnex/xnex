@@ -37,17 +37,17 @@ const items = [
 
 export default function DiffSection() {
   return (
-    <section className="relative w-full bg-black border-y border-dashed border-white/20 py-24 font-sora">
+    <section className="relative w-full bg-black border-y border-dashed border-white/20 py-16 md:py-24 font-sora px-6">
       <div className="max-w-[1600px] mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-16 leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-12 md:mb-16 leading-tight text-center md:text-left tracking-tight">
           XNEX는 무엇이 다른가?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-dashed border-white/30">
-          {items.map((item, i) => (
+          {items.map((item) => (
             <div
               key={item.num}
-              className="diff-card group relative p-10 border-r border-b last:border-b-0 border-dashed border-white/20 cursor-pointer overflow-hidden odd:border-r"
+              className="diff-card group relative p-8 md:p-10 border-r border-b last:border-b-0 border-dashed border-white/20 cursor-pointer overflow-hidden odd:border-r sm:even:border-r-0 md:even:border-r"
             >
               <span className="absolute -left-px -top-px block size-4 border-l-2 border-t-2 transition-colors duration-300 border-white/30 group-hover:border-white/60" />
               <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2 transition-colors duration-300 border-white/30 group-hover:border-white/60" />
@@ -59,10 +59,10 @@ export default function DiffSection() {
                   background: `radial-gradient(ellipse at center, ${item.glow} 0%, transparent 70%)`,
                 }}
               />
-              <p className={`text-7xl font-black text-white/10 mb-4 group-hover:text-${item.accent}-500/20 transition-colors duration-300`}>
+              <p className={`text-6xl md:text-7xl font-black text-white/10 mb-4 group-hover:text-${item.accent}-500/20 transition-colors duration-300`}>
                 {item.num}
               </p>
-              <h3 className="text-4xl font-black text-white mb-2">{item.title}</h3>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-2">{item.title}</h3>
               <p className={`text-sm text-${item.accent}-400 font-bold tracking-widest uppercase mb-4`}>
                 {item.tag}
               </p>

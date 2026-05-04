@@ -59,12 +59,14 @@ export default function AeoPipelineSection() {
           ))}
         </div>
         
-        <div style={{ marginTop: '28px', width: '100%', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding: '18px 28px', textAlign: 'center' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '0.14em', color: 'var(--t2)', textTransform: 'uppercase', marginBottom: '8px' }}>AEO 작업의 본질</div>
-          <div style={{ fontSize: '14px', color: 'var(--t1)', lineHeight: 1.8 }}>
-            <span style={{ color: '#93c5fd' }}>Step 02에서 '읽히게'</span> 만들고 &nbsp;·&nbsp;
-            <span style={{ color: '#a78bfa' }}>Step 03에서 '신뢰받게'</span> 만들고 &nbsp;·&nbsp;
-            <span style={{ color: 'var(--grn)' }}>Step 04에서 'Top 3 안에 들어가게'</span> 만드는 작업
+        <div style={{ marginTop: '28px', width: '100%', background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', padding: '24px', textAlign: 'center' }}>
+          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '0.14em', color: 'var(--t2)', textTransform: 'uppercase', marginBottom: '12px' }}>AEO 작업의 본질</div>
+          <div className="pipeline-summary-text" style={{ fontSize: '14px', color: 'var(--t1)', lineHeight: 1.8, wordBreak: 'keep-all' }}>
+            <span className="block lg:inline" style={{ color: '#93c5fd' }}>Step 02에서 {"'"}읽히게{"'"} 만들고</span>
+            <span className="hidden lg:inline">&nbsp;·&nbsp;</span>
+            <span className="block lg:inline" style={{ color: '#a78bfa' }}>Step 03에서 {"'"}신뢰받게{"'"} 만들고</span>
+            <span className="hidden lg:inline">&nbsp;·&nbsp;</span>
+            <span className="block lg:inline" style={{ color: 'var(--grn)' }}>Step 04에서 {"'"}Top 3 안에 들어가게{"'"} 만드는 작업</span>
           </div>
         </div>
 

@@ -119,13 +119,12 @@ export default function AeoHeroSection() {
       <div className="hero-content">
         <div className="hero-eyebrow">한국 홈페이지의 95%는 AI가 인용조차 못 합니다</div>
         <h1 className="hero-h1">
-          AI에게<br />
-          우리 브랜드가<br />
+          AI에게<br className="md:hidden" /> 우리 브랜드가<br />
           <span className="line-red"><em>인용되게</em> 만듭니다.</span>
         </h1>
         <p className="hero-sub">
-          ChatGPT·Gemini·Perplexity는 한 번에 3~5개만 답합니다.<br />
-          그 안에 없으면, 당신의 브랜드는 <strong>존재하지 않는 것</strong>입니다.
+          ChatGPT·Gemini·Perplexity는<br className="sm:hidden" /> 한 번에 3~5개만 답합니다.<br />
+          그 안에 없으면, 당신의 브랜드는<br className="sm:hidden" /> <strong>존재하지 않는 것</strong>입니다.
         </p>
         <div className="hero-cta-group">
           <button className="btn-r" onClick={scrollToForm}>지금 상담 신청 →</button>

@@ -41,7 +41,7 @@ export default function AeoSimulationSection() {
             신뢰도를 평가해 Top 3만 답변에 넣습니다.<br />
             <strong>지금 당신의 사이트는 읽히고 있습니까?</strong>
           </div>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <div className="aeo-sim-badges" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <span style={{ background: 'rgba(30,144,255,0.12)', border: '1px solid rgba(30,144,255,0.3)', borderRadius: '4px', padding: '5px 12px', fontFamily: 'var(--fm)', fontSize: '11px', color: '#93c5fd' }}>⚡ ChatGPT</span>
             <span style={{ background: 'rgba(0,232,122,0.08)', border: '1px solid rgba(0,232,122,0.25)', borderRadius: '4px', padding: '5px 12px', fontFamily: 'var(--fm)', fontSize: '11px', color: 'var(--grn)' }}>◆ Gemini</span>
             <span style={{ background: 'rgba(168,85,247,0.1)', border: '1px solid rgba(168,85,247,0.3)', borderRadius: '4px', padding: '5px 12px', fontFamily: 'var(--fm)', fontSize: '11px', color: '#d8b4fe' }}>◎ Perplexity</span>

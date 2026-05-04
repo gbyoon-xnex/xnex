@@ -2,18 +2,18 @@
 
 export default function WhySection() {
   return (
-    <section id="why" className="relative w-full bg-black font-sora">
+    <section id="why" className="relative w-full bg-black font-sora px-6 md:px-12 lg:px-20">
       {/* Part 1: WHY WE EXIST */}
-      <div className="border-t border-dashed border-white/20 py-24 max-w-[1600px] mx-auto">
+      <div className="border-t border-dashed border-white/20 py-16 md:py-24 max-w-[1600px] mx-auto">
         <p className="text-sm font-bold tracking-widest text-blue-400 uppercase mb-3">
           WHY WE EXIST
         </p>
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight">
           AI 시대, 그런데
           <br />
           에이전시는 아직도 그대로.
         </h2>
-        <p className="text-gray-500 text-lg mb-14 max-w-lg">
+        <p className="text-gray-500 text-base sm:text-lg mb-10 md:mb-14 max-w-lg leading-relaxed">
           시대에 맞춰 성장하지 못하고, 아직도 늘 하던 대로 관성적으로만 업무를
           수행합니다.
         </p>
@@ -105,40 +105,40 @@ export default function WhySection() {
       </div>
 
       {/* XNEX Marquee */}
-      <div className="w-full border-t border-b border-white/10 py-10 overflow-hidden relative xnex-marquee-mask bg-[linear-gradient(90deg,transparent_0%,rgba(59,130,246,0.06)_50%,transparent_100%)]">
+      <div className="w-full border-t border-b border-white/10 py-8 md:py-12 overflow-hidden relative xnex-marquee-mask bg-[linear-gradient(90deg,transparent_0%,rgba(59,130,246,0.06)_50%,transparent_100%)]">
         <div className="xnex-marquee-track">
           {[1, 2].map((i) => (
-            <div key={i} className="flex items-center gap-16">
-              <span className="text-5xl sm:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
-              <span className="text-white/50 text-xl sm:text-3xl font-bold tracking-[0.25em] uppercase">그래서</span>
-              <span className="text-5xl sm:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
-              <span className="text-white/50 text-xl sm:text-3xl font-bold tracking-[0.25em] uppercase">는</span>
-              <span className="text-5xl sm:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
-              <span className="text-3xl sm:text-5xl font-black select-none text-blue-400/55" style={{ fontFamily: 'var(--font-sora)' }}>✦</span>
+            <div key={i} className="flex items-center gap-8 md:gap-16">
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
+              <span className="text-white/50 text-base sm:text-2xl lg:text-3xl font-bold tracking-[0.25em] uppercase">그래서</span>
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
+              <span className="text-white/50 text-base sm:text-2xl lg:text-3xl font-bold tracking-[0.25em] uppercase">는</span>
+              <span className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter select-none text-white/95" style={{ fontFamily: 'var(--font-sora)', letterSpacing: '-0.04em' }}>XNEX</span>
+              <span className="text-2xl sm:text-4xl lg:text-5xl font-black select-none text-blue-400/55" style={{ fontFamily: 'var(--font-sora)' }}>✦</span>
             </div>
           ))}
         </div>
       </div>
 
       {/* Part 2: IDENTITY */}
-      <div className="max-w-[1600px] mx-auto py-24">
+      <div className="max-w-[1600px] mx-auto py-16 md:py-24">
         <div className="border border-dashed border-white/40 relative">
           <span className="absolute -left-px -top-px block size-4 border-l-2 border-t-2 border-primary" />
           <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2 border-primary" />
           <span className="absolute -bottom-px -left-px block size-4 border-b-2 border-l-2 border-primary" />
           <span className="absolute -bottom-px -right-px block size-4 border-b-2 border-r-2 border-primary" />
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2 p-12 border-b md:border-b-0 md:border-r border-dashed border-white/20 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold text-white mb-6 leading-snug">
+            <div className="md:w-1/2 p-6 md:p-12 border-b md:border-b-0 md:border-r border-dashed border-white/20 flex flex-col justify-center">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 leading-[1.3] md:leading-snug tracking-tight">
                 AI 네이티브 전문가들이
-                <br />
+                <br className="hidden md:block" />
                 검증된 결과물로
-                <br />
+                <br className="hidden md:block" />
                 클라이언트의 <span className="text-blue-400">X(성장)</span>를
-                <br />
+                <br className="hidden md:block" />
                 만들어내는 회사.
               </h2>
-              <div className="flex flex-nowrap gap-2 mt-4 w-full overflow-x-auto no-scrollbar">
+              <div className="flex flex-wrap gap-2 mt-4 w-full">
                 {['Marketing', 'Brand', 'Technology', 'Human'].map((tag) => (
                   <span
                     key={tag}
@@ -152,26 +152,26 @@ export default function WhySection() {
                 ))}
               </div>
             </div>
-            <div className="md:w-1/2 grid grid-cols-2">
+            <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2">
               {[
                 { title: 'Unknown', desc: '기존 공식으로는 풀 수 없는 변수' },
                 { title: 'Exponential', desc: '선형이 아닌 지수 성장' },
                 { title: 'Cross', desc: '경계를 넘는 조직·사업·사람' },
                 { title: 'Transformation', desc: 'AI Transformation의 핵심' },
-              ].map((item, i) => (
+              ].map((item) => (
                 <div
                   key={item.title}
-                  className="p-8 border-b border-r last:border-r-0 odd:border-r border-dashed border-white/20 flex flex-col justify-center group hover:bg-white/[0.03] transition-colors"
+                  className="p-6 md:p-8 border-b border-r last:border-r-0 last:border-b-0 sm:even:border-r-0 border-dashed border-white/20 flex flex-col justify-center group hover:bg-white/[0.03] transition-colors"
                 >
                   <div className="flex items-baseline gap-3 mb-3 whitespace-nowrap">
-                    <span className="text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform inline-block leading-none font-sora">
+                    <span className="text-2xl md:text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform inline-block leading-none font-sora">
                       X
                     </span>
-                    <span className="text-3xl font-bold text-white leading-none tracking-tight">
+                    <span className="text-xl md:text-3xl font-bold text-white leading-none tracking-tight">
                       {item.title}
                     </span>
                   </div>
-                  <p className="text-gray-400 text-base leading-relaxed">
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

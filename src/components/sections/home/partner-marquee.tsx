@@ -16,13 +16,13 @@ const logos = [
 
 export default function PartnerMarquee() {
   return (
-    <section className="relative w-full bg-black border-b border-dashed border-white/20 py-20 font-sora">
+    <section className="relative w-full bg-black border-b border-dashed border-white/20 py-16 md:py-24 font-sora px-6 md:px-12 lg:px-20">
       <div className="max-w-[1600px] mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-12 leading-tight text-center md:text-left tracking-tight">
           신뢰한 파트너들.
         </h2>
 
-        <div className="relative border border-dashed border-white/30 bg-black py-14 overflow-hidden">
+        <div className="relative border border-dashed border-white/30 bg-black py-10 md:py-16 overflow-hidden">
           <div className="partner-marquee-track">
             {[...logos, ...logos].map((src, i) => (
               <Image

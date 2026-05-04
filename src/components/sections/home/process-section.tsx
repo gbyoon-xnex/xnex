@@ -10,7 +10,7 @@ const steps = [
     label: 'D1 · Discovery',
     h: '무료 진단 + 정밀 진단으로 As-Is·니즈 파악.',
     content: (
-      <div className="flex gap-4">
+      <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex-1 bg-white/5 border border-white/10 rounded-xl p-4">
           <p className="text-sm text-blue-400 font-bold mb-1">무료 AX 진단</p>
           <p className="text-base text-gray-400">
@@ -53,9 +53,9 @@ export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="relative max-w-[1600px] mx-auto my-32 w-full" style={{ fontFamily: 'var(--font-sora)' }}>
-      <div className="mb-10 px-0">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+    <section className="relative max-w-[1600px] mx-auto py-16 md:py-24 w-full px-6" style={{ fontFamily: 'var(--font-sora)' }}>
+      <div className="mb-10 px-0 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
           4D 프로세스.
         </h2>
         <p className="text-gray-500 text-base mt-2">
@@ -77,35 +77,35 @@ export default function ProcessSection() {
         </div>
 
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-64 flex-shrink-0 border-r border-dashed border-white/20">
+          <div className="md:w-64 grid grid-cols-2 md:flex md:flex-col flex-shrink-0 border-r border-dashed border-white/20 bg-white/5 md:bg-transparent overflow-hidden">
             {steps.map((step, i) => (
               <button
                 key={step.id}
                 onClick={() => setActiveStep(i)}
                 className={cn(
-                  'w-full text-left px-8 py-6 border-b border-dashed border-white/20 transition-all duration-200 hover:bg-white/5',
-                  activeStep === i ? 'active-step' : 'text-gray-500'
+                  'w-full text-left px-4 md:px-8 py-4 md:py-6 border-r md:border-r-0 border-b border-dashed border-white/20 transition-all duration-200 hover:bg-white/5 last:border-r-0 md:last:border-r-0',
+                  activeStep === i ? 'active-step bg-white/10 md:bg-transparent' : 'text-gray-500'
                 )}
               >
                 <p
                   className={cn(
-                    'text-sm font-bold tracking-widest mb-1',
+                    'text-[10px] md:text-sm font-bold tracking-widest mb-1',
                     activeStep === i ? 'text-blue-400' : 'text-gray-600'
                   )}
                 >
                   {step.id}
                 </p>
-                <p className="font-black text-lg">{step.title}</p>
+                <p className="font-black text-sm md:text-lg">{step.title}</p>
               </button>
             ))}
           </div>
 
-          <div className="flex-1 p-10 min-h-[260px] flex flex-col justify-center">
+          <div className="flex-1 p-6 sm:p-8 md:p-12 min-h-[280px] md:min-h-[360px] flex flex-col justify-center">
             <div className="process-content">
-              <p className="text-sm font-bold text-blue-400 tracking-widest uppercase mb-3">
+              <p className="text-[10px] md:text-sm font-bold text-blue-400 tracking-widest uppercase mb-3">
                 {steps[activeStep].label}
               </p>
-              <h3 className="text-4xl font-black text-white mb-4">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-white mb-4 leading-tight">
                 {steps[activeStep].h}
               </h3>
               {steps[activeStep].content ? (

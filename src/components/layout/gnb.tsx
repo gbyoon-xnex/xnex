@@ -81,7 +81,7 @@ export default function GNB() {
         </Link>
 
         {/* Mobile Menu Trigger */}
-        <div className="md:hidden flex items-center ml-auto">
+        <div className="md:hidden flex items-center">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
               <div className="p-2 text-white cursor-pointer" aria-label="Menu">
@@ -92,17 +92,17 @@ export default function GNB() {
               <SheetHeader>
                 <SheetTitle className="text-white sr-only">Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-6 mt-12">
+              <div className="flex flex-col gap-8 mt-20 px-10 items-center">
                 {menuItems.map((item) => {
-                  const isActive = pathname === item.href;
+                  const isActive = (item.href === '/' && isHome) || (item.href !== '/' && pathname.startsWith(item.href));
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        'text-xl font-bold uppercase tracking-wider',
-                        isActive ? 'text-white' : 'text-white/60'
+                        'text-2xl font-bold uppercase tracking-widest text-center transition-all',
+                        isActive ? 'text-white' : 'text-white/60 hover:text-white'
                       )}
                     >
                       {item.name}
@@ -112,7 +112,7 @@ export default function GNB() {
                 <Link
                   href="mailto:contact@xnex.kr"
                   onClick={() => setOpen(false)}
-                  className="gnb-contact-btn w-full mt-4 justify-center"
+                  className="gnb-contact-btn w-full mt-8 justify-center py-4 text-base"
                 >
                   <span>Contact</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">

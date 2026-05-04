@@ -4,9 +4,9 @@ import Counter from '@/components/ui/counter';
 
 export default function OriginSection() {
   return (
-    <section className="relative w-full bg-black border-y border-dashed border-white/20 py-20 font-sora">
+    <section className="relative w-full bg-black border-y border-dashed border-white/20 py-16 md:py-24 font-sora px-6 md:px-12 lg:px-20">
       <div className="max-w-[1600px] mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-12 leading-tight text-center md:text-left tracking-tight">
           13년된 글로벌 기업에서
           <br />
           스핀오프.
@@ -18,15 +18,15 @@ export default function OriginSection() {
             { target: 14, suffix: '+', label: '글로벌 거점 국가' },
             { target: 350, suffix: '+', label: '임직원' },
             { target: 30, suffix: '+', label: '기업 고객사' },
-          ].map((stat, i) => (
+          ].map((stat) => (
             <div
               key={stat.label}
-              className="p-8 text-center border-r last:border-r-0 border-dashed border-white/20"
+              className="p-6 md:p-8 text-center border-r border-b md:border-b-0 last:border-r-0 border-dashed border-white/20 sm:even:border-r-0 md:even:border-r"
             >
-              <p className="text-4xl font-black text-white mb-1">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-1">
                 <Counter target={stat.target} suffix={stat.suffix} />
               </p>
-              <p className="text-gray-400 text-base">{stat.label}</p>
+              <p className="text-gray-400 text-sm md:text-base">{stat.label}</p>
             </div>
           ))}
         </div>

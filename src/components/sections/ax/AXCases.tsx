@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const AXCases = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -14,15 +15,14 @@ const AXCases = () => {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('in');
+            setIsVisible(true);
           }
         });
       },
       { threshold: 0.07 }
     );
 
-    const rvElements = section.querySelectorAll('.rv');
-    rvElements.forEach(el => revealObserver.observe(el));
+    revealObserver.observe(section);
 
     // DRAG SCROLL
     const el = scrollRef.current;
@@ -80,13 +80,13 @@ const AXCases = () => {
 
   return (
     <section id="s8" ref={sectionRef}>
-      <div className="case-header rv">
+      <div className={`case-header rv ${isVisible ? 'in' : ''}`}>
         <h2>AI 전환,<br /><em>결과로 말합니다.</em></h2>
         <p style={{ fontFamily: 'var(--fm)', fontSize: '10px', color: 'var(--t2)', letterSpacing: '.1em', textTransform: 'uppercase' }}>
           {`← 드래그하여 확인 →`}
         </p>
       </div>
-      <div className="case-scroll" id="caseScroll" ref={scrollRef}>
+      <div className={`case-scroll rv ${isVisible ? 'in' : ''}`} id="caseScroll" ref={scrollRef}>
         {cases.map((c, idx) => (
           <div key={idx} className="case-card">
             <div className="cc-industry">{c.industry}</div>

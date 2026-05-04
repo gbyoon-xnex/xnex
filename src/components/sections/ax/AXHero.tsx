@@ -112,15 +112,15 @@ const AXHero = () => {
       <div className="hero-bg-text">AI전환</div>
       <div className="hero-inner">
         <h1 className="hero-h1">
-          <div className="reveal-word">교육은<br />끝났다.</div>
+          <div className="reveal-word">교육은<br className="md:hidden" /> 끝났다.</div>
           <div className="line2">
             <span className="reveal-word">업무가</span>{' '}
             <span className="reveal-word" style={{ animationDelay: '.15s' }}>바뀌어야</span>{' '}
             <span className="reveal-word" style={{ animationDelay: '.25s' }}>한다.</span>
           </div>
         </h1>
-        <div style={{ display: 'flex', gap: '14px', alignItems: 'center', marginTop: '8px' }}>
-          <button className="gnb-cta" style={{ fontSize: '13px', padding: '13px 28px' }} onClick={sf}>
+        <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start mt-8">
+          <button className="gnb-cta w-full sm:w-auto" style={{ fontSize: '13px', padding: '13px 28px' }} onClick={sf}>
             무료 AX 진단 신청 →
           </button>
         </div>

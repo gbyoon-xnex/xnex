@@ -4,29 +4,29 @@ import { BrainCircuit, TrendingUp, LayoutTemplate, ArrowRight, ArrowDownToLine, 
 
 export default function CTASection() {
   return (
-    <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-black py-24 font-sora">
+    <section className="relative w-full min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden bg-black py-20 md:py-32 font-sora">
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        className="absolute inset-0 w-full h-full object-cover opacity-30 md:opacity-40"
       >
         <source src="/videos/video.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black z-10" />
-      <div className="relative z-20 px-6 max-w-[1200px] w-full">
-        <div className="text-center mb-12">
-          <p className="text-sm font-bold tracking-widest text-blue-400 uppercase mb-4">
-            LET'S BUILD YOUR X
+      <div className="relative z-20 px-6 md:px-12 lg:px-20 max-w-[1600px] w-full mx-auto">
+        <div className="text-center mb-10 md:mb-16">
+          <p className="text-xs md:text-sm font-bold tracking-widest text-blue-400 uppercase mb-4">
+            {"LET'S BUILD YOUR X"}
           </p>
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter drop-shadow-2xl">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter drop-shadow-2xl leading-[1.1]">
             지금 당장 시작 할 수 있는
             <br />
             3가지.
           </h2>
           <p className="text-lg text-white/60">
-            "<b>XNEX</b>를 알고 있다는 것만으로 무료입니다."
+            {"\""}<b>XNEX</b>를 알고 있다는 것만으로 무료입니다.{"\""}
           </p>
         </div>
 

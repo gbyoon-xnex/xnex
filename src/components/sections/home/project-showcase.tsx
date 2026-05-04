@@ -113,20 +113,20 @@ export default function ProjectShowcase() {
   }, []);
 
   return (
-    <section className="py-24 w-full bg-black border-t border-dashed border-white/20 overflow-hidden font-sora">
-      <div className="max-w-[1600px] mx-auto mb-10">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight text-center">
+    <section className="py-16 md:py-24 w-full bg-black border-t border-dashed border-white/20 overflow-hidden font-sora">
+      <div className="max-w-[1600px] mx-auto mb-8 md:mb-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-center tracking-tight">
           XNEX 사업영역
         </h2>
       </div>
       <div
         ref={scrollRef}
-        className="flex gap-12 px-[max(3rem,calc((100vw-80rem)/2))] overflow-x-auto overflow-y-visible cursor-grab select-none no-scrollbar snap-x snap-mandatory scroll-smooth py-12"
+        className="flex flex-col md:flex-row gap-8 md:gap-12 px-6 md:px-[max(3rem,calc((100vw-80rem)/2))] md:overflow-x-auto overflow-y-visible md:cursor-grab select-none no-scrollbar md:snap-x md:snap-mandatory scroll-smooth py-8 md:py-12"
       >
         {showcaseItems.map((item) => (
           <div
             key={item.title}
-            className="relative flex-shrink-0 w-[85vw] md:w-[70rem] h-[45vh] md:h-[50vh] snap-center overflow-visible group"
+            className="relative flex-shrink-0 w-full md:w-[70rem] h-auto min-h-[auto] md:min-h-[35rem] lg:min-h-[40rem] md:h-auto lg:h-[55vh] md:snap-center overflow-visible group"
           >
             <div
               className="absolute inset-0 rounded-[1.5rem] overflow-hidden border border-white/10"
@@ -139,36 +139,36 @@ export default function ProjectShowcase() {
                 }}
               />
             </div>
-            <div className="relative h-full flex flex-col justify-center gap-8 p-12 z-10">
-              <div>
-                <p className={`text-sm font-bold tracking-widest uppercase mb-3 text-${item.color}-400`}>
+            <div className="relative h-full flex flex-col justify-center gap-6 md:gap-8 p-6 sm:p-10 md:p-12 z-10">
+              <div className="break-words">
+                <p className={`text-[10px] md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3 text-${item.color}-400`}>
                   {item.id}
                 </p>
-                <h2 className="text-4xl md:text-6xl font-black text-white mb-3 tracking-tighter leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-2 md:mb-3 tracking-tighter leading-tight">
                   {item.title}
                 </h2>
-                <p className="text-xl text-white/60 font-medium">{item.sub}</p>
+                <p className="text-base sm:text-lg md:text-xl text-white/60 font-medium">{item.sub}</p>
               </div>
 
               {item.steps && (
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3">
                   {item.steps.map((step) => (
                     <div
                       key={step.num}
-                      className="bg-white/5 border border-white/10 rounded-xl p-4 text-center backdrop-blur-sm"
+                      className="bg-white/5 border border-white/10 rounded-xl p-3 md:p-4 text-center backdrop-blur-sm"
                     >
-                      <p className={`text-sm font-bold text-${item.color}-400 mb-2`}>
+                      <p className={`text-xs md:text-sm font-bold text-${item.color}-400 mb-1 md:mb-2`}>
                         {step.num}
                       </p>
-                      <p className="text-base font-bold text-white">{step.title}</p>
-                      <p className="text-base text-gray-500 mt-1">{step.desc}</p>
+                      <p className="text-sm md:text-base font-bold text-white whitespace-nowrap">{step.title}</p>
+                      <p className="text-[11px] md:text-base text-gray-500 mt-1">{step.desc}</p>
                     </div>
                   ))}
                 </div>
               )}
 
               {item.saas && (
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {item.saas.map((s) => (
                     <div
                       key={s.name}
@@ -177,11 +177,11 @@ export default function ProjectShowcase() {
                       <p className="text-base font-black text-emerald-400 mb-1">
                         {s.name}
                       </p>
-                      <p className="text-base text-gray-400">{s.label}</p>
+                      <p className="text-sm md:text-base text-gray-400">{s.label}</p>
                     </div>
                   ))}
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm flex items-center justify-center col-span-1">
-                    <p className="text-sm text-gray-600">+ 추가 라인업 출시 예정</p>
+                  <div className="bg-white/5 border border-white/10 rounded-xl p-4 backdrop-blur-sm flex items-center justify-center">
+                    <p className="text-xs text-gray-600">+ 추가 라인업 출시 예정</p>
                   </div>
                 </div>
               )}
@@ -196,7 +196,7 @@ export default function ProjectShowcase() {
             </div>
           </div>
         ))}
-        <div className="flex-shrink-0 w-[15vw]" />
+        <div className="hidden md:block flex-shrink-0 w-[15vw]" />
       </div>
     </section>
   );
