@@ -23,7 +23,7 @@ export default function Footer() {
   const getSlogan = () => {
     if (isAeo) return 'AI 검색 최적화 전문 에이전시';
     if (isAx) return 'AI로 혁신한 기업만이 초격차를 만듭니다.';
-    if (isMarketing) return 'AI로 혁신한 기업만이 초격차를 만듭니다.';
+    if (isMarketing) return '캠페인, 기획 마케팅, 유입, 확산, 소문이 더해집니다.';
     return '비즈니스 스케일업 파트너';
   };
 
