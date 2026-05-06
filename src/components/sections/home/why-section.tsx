@@ -4,7 +4,7 @@ export default function WhySection() {
   return (
     <section id="why" className="relative w-full bg-black font-sora px-6 md:px-12 lg:px-20">
       {/* Part 1: WHY WE EXIST */}
-      <div className="border-t border-dashed border-white/20 py-16 md:py-24 max-w-[1600px] mx-auto">
+      <div className="border-t border-white/10 py-16 md:py-24 max-w-[1600px] mx-auto">
         <p className="text-sm font-bold tracking-widest text-blue-400 uppercase mb-3">
           WHY WE EXIST
         </p>
@@ -18,7 +18,7 @@ export default function WhySection() {
           수행합니다.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-dashed border-white/30">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
           {[
             {
               title: '마케팅 에이전시',
@@ -45,7 +45,7 @@ export default function WhySection() {
           ].map((box, i) => (
             <div
               key={i}
-              className="relative p-8 border-b md:border-b-0 md:border-r last:border-r-0 border-dashed border-white/20"
+              className="relative p-8 border-b md:border-b-0 md:border-r last:border-r-0 border-white/10"
             >
               <span className="absolute -left-px -top-px block size-4 border-l-2 border-t-2 border-red-500" />
               <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2 border-red-500" />
@@ -122,13 +122,13 @@ export default function WhySection() {
 
       {/* Part 2: IDENTITY */}
       <div className="max-w-[1600px] mx-auto py-16 md:py-24">
-        <div className="border border-dashed border-white/40 relative">
+        <div className="border border-white/10 relative">
           <span className="absolute -left-px -top-px block size-4 border-l-2 border-t-2 border-primary" />
           <span className="absolute -right-px -top-px block size-4 border-r-2 border-t-2 border-primary" />
           <span className="absolute -bottom-px -left-px block size-4 border-b-2 border-l-2 border-primary" />
           <span className="absolute -bottom-px -right-px block size-4 border-b-2 border-r-2 border-primary" />
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2 p-6 md:p-12 border-b md:border-b-0 md:border-r border-dashed border-white/20 flex flex-col justify-center">
+            <div className="md:w-1/2 p-6 md:p-12 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-center">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6 leading-[1.3] md:leading-snug tracking-tight">
                 AI 네이티브 전문가들이
                 <br className="hidden md:block" />
@@ -152,7 +152,7 @@ export default function WhySection() {
                 ))}
               </div>
             </div>
-            <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2">
+            <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 min-w-0">
               {[
                 { title: 'Unknown', desc: '기존 공식으로는 풀 수 없는 변수' },
                 { title: 'Exponential', desc: '선형이 아닌 지수 성장' },
@@ -161,13 +161,16 @@ export default function WhySection() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="p-6 md:p-8 border-b border-r last:border-r-0 last:border-b-0 sm:even:border-r-0 border-dashed border-white/20 flex flex-col justify-center group hover:bg-white/[0.03] transition-colors"
+                  className="p-6 md:p-8 border-b border-r last:border-r-0 last:border-b-0 sm:even:border-r-0 border-white/10 flex flex-col justify-center group hover:bg-white/[0.03] transition-colors min-w-0 overflow-visible"
                 >
-                  <div className="flex items-baseline gap-3 mb-3 whitespace-nowrap">
-                    <span className="text-2xl md:text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform inline-block leading-none font-sora">
+                  <div className="flex items-baseline gap-2 md:gap-3 mb-3">
+                    <span className="text-xl md:text-2xl font-black text-blue-400 group-hover:scale-110 transition-transform inline-block leading-none font-sora shrink-0">
                       X
                     </span>
-                    <span className="text-xl md:text-3xl font-bold text-white leading-none tracking-tight">
+                    <span 
+                      className="font-bold text-white leading-tight tracking-tight break-words"
+                      style={{ fontSize: 'clamp(16px, 2vw, 24px)' }}
+                    >
                       {item.title}
                     </span>
                   </div>

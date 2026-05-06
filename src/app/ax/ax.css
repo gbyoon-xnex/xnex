@@ -325,7 +325,7 @@
 .ax-page .ax-form-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .ax-page .ax-form-steps .ps{background:var(--bg2);padding:24px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .ax-page .ax-form-steps .ps:last-child{border-right:none}
-.ax-page .ax-form-steps .ps-step{font-family:var(--fd);font-size:28px;color:var(--org);line-height:1}
+.ax-page .ax-form-steps .ps-step{font-family:var(--fd);font-size:48px;color:var(--org);line-height:1;white-space:nowrap;min-width:60px;display:block}
 .ax-page .ps-h{font-size:15px;font-weight:700;color:var(--t0);margin-bottom:3px}
 .ax-page .ps-d{font-size:13px;color:var(--t2);line-height:1.6}
 
@@ -352,7 +352,11 @@
 .ax-page .rv.in{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
-@media(max-width:1024px){
+@media(max-width:1023px){
+  .ax-page .ax-form-steps { grid-template-columns: repeat(2, 1fr); }
+  .ax-page .ax-form-steps .ps { padding: 20px 18px; }
+  .ax-page .ax-form-steps .ps-step { font-size: 36px; }
+
   .ax-page .roi-layout,.ax-page .alliance-inner,.ax-page .check-layout{grid-template-columns:1fr;gap:48px}
   .ax-page .hub-canvas-wrap{display:none}
   .ax-page .hero-aside{display:none}
@@ -361,16 +365,17 @@
   .ax-page .proc-track{padding:0 28px}
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
+  .ax-page .ax-form-steps { grid-template-columns: 1fr; gap: 8px; border: none; border-radius: 0; }
+  .ax-page .ax-form-steps .ps { border: 1px solid var(--line); border-radius: 8px; min-height: auto; }
+  .ax-page .ax-form-steps .ps-step { white-space: nowrap; font-size: 32px; }
+
   .ax-page .gnb{padding:16px 20px}
   .ax-page #s3,.ax-page #s4,.ax-page #s5,.ax-page #s6,.ax-page #s7,.ax-page #s8,.ax-page #s9,.ax-page #s10,.ax-page #s11{padding-left:20px;padding-right:20px}
   .ax-page .footer{padding:28px 20px}
 
   .ax-page .form-inner-wrap, .ax-page .form-steps-wrap{padding:0 20px}
   .ax-page .form-title{margin-bottom:24px}
-  .ax-page .ax-form-steps{grid-template-columns:1fr !important}
-  .ax-page .ax-form-steps .ps{border-right:none !important; border-bottom:1px solid var(--line) !important}
-  .ax-page .ax-form-steps .ps:last-child{border-bottom:none !important}
   
   .ax-page .faq-header{padding:0}
   .ax-page .fq-num{left:20px}
@@ -400,6 +405,5 @@
   .ax-page .proc-arrow{display:none}
   .ax-page .diag-kpis{grid-template-columns:1fr}
   .ax-page .form-layout .ps-list{grid-template-columns:1fr}
-  .ax-page .ax-form-steps{grid-template-columns:1fr}
   .ax-page .ba-cell{padding:20px}
 }

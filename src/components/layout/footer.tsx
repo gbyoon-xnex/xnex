@@ -1,12 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import PrivacyModal from '@/components/ui/privacy-modal';
 
 export default function Footer() {
   const pathname = usePathname();
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   // 1. Path-based Logic
   const isAeo = pathname.startsWith('/aeo');
@@ -38,9 +41,9 @@ export default function Footer() {
   const links = [
     { name: 'AX 에이전시', href: '/ax', active: isAx, activeColor: 'text-orange-500' },
     { name: 'AEO 홈페이지', href: '/aeo', active: isAeo, activeColor: 'text-red-500' },
-    { name: 'X-GROSS 마케팅', href: '/marketing', active: isAeo, activeColor: 'text-yellow-green-500' },
-    { name: 'XNEX 홈', href: '/', hidden: !isAeo && !isAx },
-    { name: '개인정보처리방침', href: '#' },
+    { name: 'X-GROSS 마케팅', href: '/marketing', active: isMarketing, activeColor: 'text-yellow-green-500' },
+    { name: 'XNEX 홈', href: '/', hidden: !isAeo && !isAx && !isMarketing },
+    { name: '개인정보처리방침', href: '#', isModal: true },
   ];
 
   return (
@@ -65,18 +68,34 @@ export default function Footer() {
           </div>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-4 justify-center md:justify-end w-full md:w-auto">
-            {links.filter(l => !l.hidden).map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href}
-                className={cn(
-                  "text-[13px] transition-colors hover:text-white",
-                  link.active ? (link.activeColor || "text-white") : "text-white/50"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {links.filter(l => !l.hidden).map((link) => {
+              const className = cn(
+                "text-[13px] transition-colors hover:text-white cursor-pointer",
+                link.active ? (link.activeColor || "text-white") : "text-white/50"
+              );
+
+              if (link.isModal) {
+                return (
+                  <button 
+                    key={link.name} 
+                    onClick={() => setIsPrivacyOpen(true)}
+                    className={className}
+                  >
+                    {link.name}
+                  </button>
+                );
+              }
+
+              return (
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  className={className}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 
@@ -87,6 +106,11 @@ export default function Footer() {
           </p>
         </div>
       </div>
+
+      <PrivacyModal 
+        isOpen={isPrivacyOpen} 
+        onClose={() => setIsPrivacyOpen(false)} 
+      />
     </footer>
   );
 }

@@ -258,11 +258,11 @@ export default function MarketingHero() {
           </h1>
           <div className="hero-row">
             <p className="hero-desc">
-              캠페인 기획부터 바이럴 확산까지.
+              IT + 데이터 + 콘텐츠 기반의 마케팅 에이전시.
               <br />
-              소비자가 <strong>자발적으로 이야기하는 브랜드</strong>를
+              연 광고비 200억을 직접 집행한 전략가가
               <br />
-              전략적으로 설계합니다.
+              귀사의 캠페인을 직접 설계합니다.
             </p>
             <div className="hero-ctas" style={{ marginTop: "36px" }}>
               <a href="#cta" className="btn-prim">

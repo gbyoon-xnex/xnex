@@ -1,6 +1,6 @@
 'use client';
 
-import { BrainCircuit, TrendingUp, LayoutTemplate, ArrowRight, ArrowDownToLine, Mail } from 'lucide-react';
+import { BrainCircuit, TrendingUp, LayoutTemplate, ArrowRight, ArrowDownToLine, Mail, Download } from 'lucide-react';
 
 export default function CTASection() {
   return (
@@ -49,7 +49,7 @@ export default function CTASection() {
           </a>
 
           <a
-            href="#"
+            href="/marketing"
             className="group relative p-6 rounded-2xl border border-white/15 bg-white/[0.03] overflow-hidden hover:border-white/30 hover:bg-white/[0.06] transition-all backdrop-blur-sm"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -91,19 +91,25 @@ export default function CTASection() {
           <div className="flex-1 h-px bg-white/15" />
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-white/80 text-base font-semibold hover:bg-white/10 hover:border-white/40 transition-colors"
+        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <button
+            onClick={() => {
+              window.open(
+                '/docs/xnex-introduction.pdf',
+                '_blank',
+                'noopener,noreferrer'
+              );
+            }}
+            className="flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-sm hover:border-white hover:bg-white/5 transition-all cursor-pointer"
           >
-            <ArrowDownToLine className="w-4 h-4" />
+            <Download size={16} />
             회사소개서 다운로드
-          </a>
+          </button>
           <a
             href="mailto:contact@xnex.kr"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white/60 text-base font-medium hover:text-white transition-colors"
+            className="flex items-center gap-2 px-8 py-3.5 border border-white/30 text-white text-sm hover:border-white hover:bg-white/5 transition-all"
           >
-            <Mail className="w-4 h-4" />
+            <Mail size={16} />
             contact@xnex.kr
           </a>
         </div>

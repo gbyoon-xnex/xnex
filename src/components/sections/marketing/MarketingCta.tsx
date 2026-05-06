@@ -107,7 +107,12 @@ export default function MarketingCta() {
               <br />
               <em>설계하세요.</em>
             </h2>
-            <div className="urg" style={{ marginTop: "28px" }}>
+            <p style={{ fontSize: "14px", color: "#686664", marginTop: "24px", lineHeight: "1.6", wordBreak: "keep-all" }}>
+              13년 그룹 자산과 200억+ 광고 집행 경험을 바탕으로
+              <br />
+              귀사의 마케팅 전략을 직접 설계합니다
+            </p>
+            <div className="urg" style={{ marginTop: "16px" }}>
               <span className="urg-d"></span>
               잔여 3자리 · 6월부터 월 100만원 인상
             </div>

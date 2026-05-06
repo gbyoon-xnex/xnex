@@ -53,23 +53,21 @@ export default function MarketingPhilosophy() {
           <div className="rv">
             <div className="stag">{"// 브랜드 철학"}</div>
             <div className="ph-quote">
-              광고는 <em>한 번</em>을 보여줍니다.
+              &quot;광고 예산은 비용이 아닙니다.
               <br />
-              브랜드는 <em>평생</em>으로 기억됩니다.
+              의사결정의 결과물입니다.&quot;
             </div>
             <p className="ph-body">
-              소비자는 광고를 건너뜁니다.
+              연 광고비 200억을 직접 집행해본 사업가가 짜는 전략.
               <br />
-              하지만 좋아하는 브랜드의 이야기는
+              X-그로스는 실행 에이전시가 아닌
               <br />
-              스스로 찾아보고, 공유하고, 소문냅니다.
+              ROI 기반 캠페인을 직접 설계하는 파트너입니다.
               <br />
               <br />
-              X-그로스는 소비자가 자발적으로
+              13년 글로벌 비즈니스 그룹의 자산을 응축한
               <br />
-              당신의 브랜드를 이야기하게 만드는
-              <br />
-              전략적 구조를 설계합니다.
+              전문 마케팅 에이전시.
             </p>
           </div>
           <div className="rv d1">

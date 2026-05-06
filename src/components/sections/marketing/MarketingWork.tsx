@@ -77,11 +77,11 @@ export default function MarketingWork() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "20px" }}>
           <h2 className="sh2 rv" style={{ marginTop: "16px" }}>
-            무엇이든<br />
-            <em>브랜드가 됩니다.</em>
+            IT + 데이터 + 콘텐츠,<br />
+            <em>무엇이든 브랜드가 됩니다.</em>
           </h2>
           <p className="rv d2" style={{ fontSize: "14px", color: "var(--mg-muted)", maxWidth: "320px", lineHeight: "1.8" }}>
-            기획부터 확산까지, 전 과정을 한 팀이 책임집니다. 에이전시를 여러 곳 쓸 필요가 없습니다.
+            현황 분석 → 한정 예산 내 최대 효과 설계 → 캠페인 기획 → 실행
           </p>
         </div>
         <div className="work-grid">
